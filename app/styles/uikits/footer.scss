@@ -1,0 +1,10 @@
+footer {
+  color: white;
+  padding: 25px;
+  background-color: $secondaryColor;
+  div {
+    display: flex;
+    gap: 0 10px;
+    font-size: 30px;
+  }
+}

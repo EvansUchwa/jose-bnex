@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Work_Sans } from "next/font/google";
+import Navbar from "../uikits/navbar";
+import "./styles/index.scss";
+import "./styles/slick.min.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import Footer from "@/uikits/footer";
+
+const inter = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

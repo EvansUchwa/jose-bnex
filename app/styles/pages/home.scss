@@ -1,0 +1,178 @@
+.home {
+  h2 {
+    font-size: 60px;
+  }
+}
+.banner {
+  z-index: 10;
+  position: relative;
+
+  .banner-video {
+    width: 100%;
+    height: 100%;
+    background-color: olive;
+    z-index: 20;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+  .banner-text {
+    position: absolute;
+    color: $primaryColor;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    section {
+      z-index: 21;
+      h1 {
+        font-size: 90px;
+        margin-bottom: 25px;
+        letter-spacing: 6px;
+      }
+    }
+  }
+  .banner-icon {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    color: white;
+    font-size: 100px;
+    z-index: 233;
+    transition: all 0.5s;
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+}
+
+.home-about {
+  .ha-text {
+    position: relative;
+    z-index: 10000022;
+    height: 100%;
+    width: 60%;
+    // margin: auto;
+    margin-left: 50px;
+    margin-right: auto;
+    padding: 10% 0;
+
+    p {
+      color: white;
+      // font-size: 20px;
+    }
+  }
+}
+
+.home-import-export {
+  section {
+    color: white;
+    position: relative;
+    z-index: 23;
+    width: 60%;
+    margin-left: 50px;
+    padding: 10% 0;
+  }
+}
+
+.sliderStyle1 {
+  z-index: 22;
+  // slick-arrow slick-next
+  .slick-dots {
+    bottom: -100px;
+    left: 0;
+    position: absolute;
+    display: flex !important;
+    // flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 25px;
+    li {
+      white-space: nowrap;
+      cursor: pointer;
+      &.slick-active {
+        color: $secondaryColor;
+      }
+    }
+  }
+  .slick-arrow {
+    cursor: pointer;
+    position: absolute;
+    bottom: -50px;
+    font-size: 50px;
+    &:focus {
+      color: $secondaryColor !important;
+    }
+    &.slick-next {
+      left: 60px;
+    }
+  }
+}
+
+.boxTitleStyle1 {
+  color: white;
+  position: relative;
+  margin-bottom: 50px;
+  h3 {
+    font-size: 25px;
+    white-space: nowrap;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    top: 50px;
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    h2 {
+      font-size: 30px;
+    }
+  }
+  .home-about {
+    .ha-text {
+      width: 75%;
+    }
+  }
+
+  .home-import-export {
+    section {
+      width: 75%;
+    }
+  }
+  .sliderStyle1 {
+    .slick-dots {
+      li {
+        b {
+          display: none;
+        }
+        span {
+          display: block;
+          height: 16px;
+          width: 16px;
+          border-radius: 50px;
+          background-color: white;
+        }
+        &.slick-active {
+          span {
+            background-color: $secondaryColor;
+          }
+        }
+      }
+    }
+    .slick-arrow {
+    }
+  }
+}
