@@ -129,6 +129,13 @@
 
 .home-contact {
   section {
+    .contactMessageSent {
+      width: 100%;
+      svg {
+        font-size: 200px;
+        color: $secondaryColor;
+      }
+    }
     .hc-contactInfos {
       margin: 25px 0;
       display: flex;

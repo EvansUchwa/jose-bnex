@@ -25,6 +25,18 @@ a {
   color: inherit;
 }
 
+button {
+  background-color: white;
+  padding: 15px 30px;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:disabled {
+    cursor: initial;
+    background-color: #efefef !important;
+    color: grey !important;
+  }
+}
 .pageContainer {
   width: 100%;
   min-height: 100dvh;

@@ -39,3 +39,17 @@ form {
     width: 100%;
   }
 }
+
+.formBtn {
+  button {
+    background-color: $secondaryColor;
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.formikErrorMessage {
+  color: $secondaryColor;
+  padding: 10px 0;
+  width: 100%;
+}

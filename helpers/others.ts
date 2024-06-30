@@ -5,13 +5,9 @@ export function changeSliderContainerBg(
   i: number,
   containerId: string
 ) {
-  console.log(i);
-
   let bgContaner = document.getElementById(
     "bgContainerFor-" + containerId
   ) as HTMLDivElement;
-  console.log(slidersItem[i].bgImageName);
-
   bgContaner.style.backgroundImage =
     "url(/banners/" + slidersItem[i].bgImageName + ")";
 }

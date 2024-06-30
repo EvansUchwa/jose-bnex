@@ -1,4 +1,4 @@
-import { PhCaretCircleDownBold } from "@/uikits/icons";
+import { PhCaretCircleDownBold, PhCaretDoubleDownFill } from "@/uikits/icons";
 import React from "react";
 
 function VBanner() {
@@ -14,7 +14,7 @@ function VBanner() {
         </section>
       </div>
       <div className="banner-icon">
-        <PhCaretCircleDownBold />
+        <PhCaretDoubleDownFill />
       </div>
     </div>
   );

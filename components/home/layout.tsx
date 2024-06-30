@@ -1,6 +1,6 @@
 import { changeSliderContainerBg } from "@/helpers/others";
 import { SliderStyle1PropsType } from "@/types/slider";
-import { PhCaretCircleLeftBold, PhCaretCircleRightBold } from "@/uikits/icons";
+import { PhCaretLeftFill, PhCaretRightFill } from "@/uikits/icons";
 import Slider from "react-slick";
 
 type HomeSectionBackgroundLayout = React.PropsWithChildren & {
@@ -40,16 +40,16 @@ export function SliderStyle1Layout({
     autoplaySpeed: autoSlideTime,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <PhCaretCircleRightBold />,
-    prevArrow: <PhCaretCircleLeftBold />,
+    nextArrow: <PhCaretRightFill />,
+    prevArrow: <PhCaretLeftFill />,
     customPaging: (i: number) => (
       <div>
         <b>{sliderItems[i].title}</b>
         <span></span>
       </div>
     ),
-    afterChange: (i: number) =>
-      changeSliderContainerBg(sliderItems, i, sliderContainerBgId),
+    beforeChange: (ci: number, fi: number) =>
+      changeSliderContainerBg(sliderItems, fi, sliderContainerBgId),
   };
 
   return (

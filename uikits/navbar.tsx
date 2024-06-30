@@ -14,17 +14,33 @@ function Navbar() {
   const defHash = getDefaulthash();
   const [currentHash, setCH] = useState<string>(defHash);
   const cPathname = usePathname();
+  const [scrollAfterNav, setSAN] = useState<boolean>(false);
 
   useEffect(() => {
     if (defHash != "#") {
       document.getElementById(defHash.replace("#", ""))?.scrollIntoView();
+    }
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", (e) => {
+        if (window.scrollY > 250) {
+          let navImg = document.querySelector("nav img") as HTMLElement;
+          // navImg.style.opacity = "0.2";
+          !scrollAfterNav && setSAN(true);
+        } else {
+          setSAN(false);
+        }
+      });
     }
   }, []);
 
   return (
     <>
       <nav>
-        <img src="/logo.png" alt="logo site" />
+        <img
+          src="/logo.png"
+          alt="logo site"
+          className={scrollAfterNav ? "navLogoHided" : ""}
+        />
       </nav>
       <aside>
         <div>
