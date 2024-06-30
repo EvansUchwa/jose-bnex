@@ -1,4 +1,4 @@
-import { SliderStyle1ArrayItemType } from "../../types/slider";
+import { SliderStyle1ArrayItemType } from "../types/slider";
 
 export function changeSliderContainerBg(
   slidersItem: SliderStyle1ArrayItemType[],

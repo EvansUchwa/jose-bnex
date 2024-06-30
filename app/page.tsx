@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { ReactElement } from "react";
 import About from "@/components/home/about";
 import pageLayout from "../hocs/ly";
 import ImportExport from "@/components/home/import-export";
@@ -9,15 +9,15 @@ import Contact from "@/components/home/contact";
 import VBanner from "@/components/home/vBanner";
 import { HomeSectionBackgroundLayout } from "@/components/home/layout";
 
-const homeSubComponenents = [
-  { component: <VBanner /> },
-  { component: <About />, bannerImg: "about" },
-  { component: <ImportExport />, bannerImg: "importExport" },
-  { component: <Studio />, bannerImg: "studio" },
-  { component: <Partners />, bannerImg: "partner" },
-  { component: <Contact />, bannerImg: "contact" },
-];
 function Home() {
+  const homeSubComponenents = [
+    { component: <VBanner /> },
+    { component: <About />, bannerImg: "about" },
+    { component: <ImportExport />, bannerImg: "importExport" },
+    { component: <Studio />, bannerImg: "studio" },
+    { component: <Partners />, bannerImg: "partner" },
+    { component: <Contact />, bannerImg: "contact" },
+  ];
   return (
     <div className="home">
       {homeSubComponenents.map((item, i) => {

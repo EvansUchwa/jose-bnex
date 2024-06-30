@@ -2,18 +2,24 @@
 import React, { useEffect, useState } from "react";
 import { getRoute, sidebarRoutes } from "../helpers/route";
 import Link from "next/link";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
+function getDefaulthash() {
+  if (typeof window !== "undefined") {
+    return window.location.hash ? window.location.hash : "#vBanner";
+  }
+  return "#vBanner";
+}
 function Navbar() {
-  const defHash = window.location.hash ? window.location.hash : "#";
-  const [currentHash, setCH] = useState<string | undefined>(defHash);
+  const defHash = getDefaulthash();
+  const [currentHash, setCH] = useState<string>(defHash);
   const cPathname = usePathname();
 
-  // useEffect(() => {
-  //   // if (defHash != "#") {
-  //   document.getElementById(defHash.replace("#", ""))?.scrollIntoView();
-  //   // }
-  // }, []);
+  useEffect(() => {
+    if (defHash != "#") {
+      document.getElementById(defHash.replace("#", ""))?.scrollIntoView();
+    }
+  }, []);
 
   return (
     <>
@@ -35,7 +41,7 @@ function Navbar() {
                   ? "navLinkActive"
                   : ""
               }
-              onClick={() => setCH(item?.hashPath?.replace("/", ""))}
+              onClick={() => setCH(item.hashPath!.replace("/", ""))!}
               id={"navLink-" + item?.hashPath?.replace("/#", "")}
             >
               <strong>{getRoute(item.name)?.name}</strong>

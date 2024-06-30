@@ -1,14 +1,14 @@
 "use client";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface Props {
   [key: string]: any;
 }
 
-function pageLayout(WrappedComponent: React.ComponentType) {
+function pageLayout(
+  WrappedComponent: React.ComponentType
+): React.ComponentType {
   function HOC(props: Props) {
-    // const router = useRouter();
     const [visibleElement, setVisibleElement] = useState<string | null>(null);
     useEffect(() => {
       const vBannerBox = document.querySelector("#vBanner") as HTMLElement;
