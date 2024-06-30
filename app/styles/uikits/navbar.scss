@@ -18,8 +18,8 @@ aside {
   right: 0;
   transform: translateY(-50%);
   z-index: 100;
-  // background-color: rgba($color: #000000, $alpha: 0.6);
-  background-color: #333;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  // background-color: #333;
   border-radius: 10px 0 0 10px;
   div {
     display: flex;
@@ -27,7 +27,7 @@ aside {
     color: $primaryColor;
     a {
       font-weight: bold;
-      border-bottom: solid 2px $primaryColor;
+      border-bottom: solid 2px grey;
       padding: 20px 25px;
       transition: all 0.5s;
       display: flex;
