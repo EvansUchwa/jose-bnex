@@ -21,12 +21,14 @@
     }
   }
   .banner-text {
+    z-index: 100;
     position: absolute;
     color: $primaryColor;
     height: 100%;
-    width: 100%;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
-    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,6 +163,32 @@
   }
 }
 
+.home-partner {
+  h2 {
+    margin-bottom: 25px;
+  }
+  .hp-partnerBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    h3 {
+      font-size: 30px;
+    }
+    img {
+      width: 45%;
+    }
+    div {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 25px 0;
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .home {
     h2 {
@@ -177,16 +205,6 @@
     .slick-dots {
       flex-wrap: wrap;
       li {
-        b {
-          // display: none;
-        }
-        span {
-          // display: block;
-          // height: 16px;
-          // width: 16px;
-          // border-radius: 50px;
-          // background-color: white;
-        }
         &.slick-active {
           span {
             background-color: $secondaryColor;
@@ -207,6 +225,22 @@
         .formikInput:nth-child(2) {
           width: 100%;
         }
+      }
+    }
+  }
+
+  .home-partner {
+    h2 {
+      margin-bottom: 25px;
+    }
+    .hp-partnerBox {
+      flex-direction: column;
+      gap: 20px 0;
+      img {
+        width: 100%;
+      }
+      div {
+        width: 100%;
       }
     }
   }

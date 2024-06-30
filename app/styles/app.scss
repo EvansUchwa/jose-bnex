@@ -5,6 +5,9 @@ body {
   background-color: black;
   scroll-behavior: smooth;
 }
+* {
+  box-sizing: border-box;
+}
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
@@ -26,6 +29,7 @@ a {
 }
 
 button {
+  border-radius: 10px;
   background-color: white;
   padding: 15px 30px;
   border: 0;
@@ -33,7 +37,7 @@ button {
   transition: all 0.5s;
   &:disabled {
     cursor: initial;
-    background-color: #efefef !important;
+    background-color: rgba($color: #fff, $alpha: 0.3) !important;
     color: grey !important;
   }
 }
@@ -90,10 +94,14 @@ button {
   }
 }
 
+img {
+  object-fit: cover;
+}
+
 @media screen and (max-width: 758px) {
   .pageContainer {
     & > section {
-      width: 75%;
+      width: 80%;
       margin: auto !important;
     }
   }

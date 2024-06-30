@@ -2,6 +2,9 @@ import { PhCaretCircleDownBold, PhCaretDoubleDownFill } from "@/uikits/icons";
 import React from "react";
 
 function VBanner() {
+  function handleScrollToNext() {
+    document.querySelector("#about")?.scrollIntoView();
+  }
   return (
     <div className="pageContainer banner" id="vBanner">
       <div className="banner-video">
@@ -13,7 +16,7 @@ function VBanner() {
           <p>Growing profitable businesses for a positive impact</p>
         </section>
       </div>
-      <div className="banner-icon">
+      <div className="banner-icon" onClick={handleScrollToNext}>
         <PhCaretDoubleDownFill />
       </div>
     </div>
