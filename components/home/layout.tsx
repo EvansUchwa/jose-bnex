@@ -1,4 +1,4 @@
-import { changeSliderContainerBg } from "@/app/helpers/others";
+import { changeSliderContainerBg } from "@/helpers/others";
 import { SliderStyle1PropsType } from "@/types/slider";
 import { PhCaretCircleLeftBold, PhCaretCircleRightBold } from "@/uikits/icons";
 import Slider from "react-slick";

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { getRoute, sidebarRoutes } from "../app/helpers/route";
+import { getRoute, sidebarRoutes } from "../helpers/route";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 

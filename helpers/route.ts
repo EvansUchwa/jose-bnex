@@ -1,3 +1,5 @@
+import { routeHelperType } from "@/types/route";
+
 export const allRoutes: routeHelperType[] = [
   { name: "Accueil", path: "/", hashPath: "/#vBanner" },
   { name: "A propos", path: "/#about", hashPath: "/#about" },

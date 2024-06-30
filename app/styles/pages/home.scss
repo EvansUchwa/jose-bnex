@@ -57,15 +57,6 @@
 
 .home-about {
   .ha-text {
-    position: relative;
-    z-index: 10000022;
-    height: 100%;
-    width: 60%;
-    // margin: auto;
-    margin-left: 50px;
-    margin-right: auto;
-    padding: 10% 0;
-
     p {
       color: white;
       // font-size: 20px;
@@ -75,12 +66,6 @@
 
 .home-import-export {
   section {
-    color: white;
-    position: relative;
-    z-index: 23;
-    width: 60%;
-    margin-left: 50px;
-    padding: 10% 0;
   }
 }
 
@@ -135,23 +120,40 @@
   }
 }
 
+.home-contact {
+  section {
+    .hc-contactInfos {
+      margin: 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+        svg {
+          font-size: 30px;
+        }
+      }
+    }
+    form {
+      .formikInput:nth-child(1) {
+        width: 45%;
+      }
+      .formikInput:nth-child(2) {
+        width: 45%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .home {
     h2 {
       font-size: 30px;
     }
   }
-  .home-about {
-    .ha-text {
-      width: 75%;
-    }
-  }
 
-  .home-import-export {
-    section {
-      width: 75%;
-    }
-  }
   .sliderStyle1 {
     .slick-dots {
       li {
@@ -173,6 +175,19 @@
       }
     }
     .slick-arrow {
+    }
+  }
+
+  .home-contact {
+    section {
+      form {
+        .formikInput:nth-child(1) {
+          width: 100%;
+        }
+        .formikInput:nth-child(2) {
+          width: 100%;
+        }
+      }
     }
   }
 }

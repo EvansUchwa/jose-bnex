@@ -29,6 +29,14 @@ a {
   width: 100%;
   min-height: 100dvh;
   position: relative;
+  & > section {
+    color: white;
+    position: relative;
+    z-index: 23;
+    width: 60%;
+    margin-left: 50px;
+    padding: 10% 0;
+  }
 
   &::after {
     content: "";
@@ -40,8 +48,6 @@ a {
     left: 0;
     z-index: 11;
   }
-  // overflow-y: auto;
-  // position: fixed;
   h1 {
     font-family: Blanka;
   }
@@ -69,5 +75,14 @@ a {
     background-size: 100% !important;
     background-repeat: no-repeat;
     object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .pageContainer {
+    & > section {
+      width: 75%;
+      margin: auto !important;
+    }
   }
 }

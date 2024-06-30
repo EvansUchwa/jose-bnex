@@ -1,0 +1,41 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+
+  input,
+  textarea {
+    background-color: rgba($color: #fff, $alpha: 0.4);
+    border: solid 3px rgba($color: #fff, $alpha: 0.3);
+    padding: 15px;
+    font-size: 25px;
+    color: white;
+    &::placeholder {
+      color: white;
+    }
+    transition: all 0.5s;
+    &:focus {
+      outline: 0;
+      border-color: $secondaryColor;
+      &::placeholder {
+        color: $secondaryColor;
+      }
+    }
+  }
+  textarea {
+    height: 300px;
+  }
+}
+.formikInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // &.fiSemi {
+  //   width: 45% !important;
+  // }
+  input,
+  textarea {
+    width: 100%;
+  }
+}
